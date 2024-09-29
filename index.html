@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curs Disseny - Activitat 1a sessió</title>
+  <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css">
+  <style>
+    /*
+  1. Use a more-intuitive box-sizing model.
+*/
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    /*
+  2. Remove default margin
+*/
+    * {
+      margin: 0;
+    }
+
+    /*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+    body {
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /*
+  5. Improve media defaults
+*/
+    img,
+    picture,
+    video,
+    canvas,
+    svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    /*
+  6. Remove built-in form typography styles
+*/
+    input,
+    button,
+    select {
+      font: inherit;
+    }
+
+    /*
+  7. Avoid text overflows
+*/
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      overflow-wrap: break-word;
+    }
+
+    /*
+  8. Create a root stacking context
+*/
+    #root,
+    #__next {
+      isolation: isolate;
+    }
+
+  </style>
+  <style>
+    html,
+    input,
+    select,
+    button {
+      font-family: Inter;
+    }
+
+    .main {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 1rem;
+    }
+
+    .main-split {
+      height: 100vh;
+      height: 100dvh;
+    }
+
+    .main-split-1 {
+      width: 40vw;
+      width: 40dvw;
+    }
+
+    .main-split-2 {
+      width: 5vw;
+      width: 5dvw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .main-split-3 {
+      width: 55vw;
+      width: 55dvw;
+    }
+
+    .full {
+      .main-split-1 {
+        width: 5vw;
+        width: 5dvw;
+      }
+
+      .main-split-3 {
+        width: 90vw;
+        width: 90dvw;
+      }
+
+      #display {
+        gap: 4rem;
+      }
+
+      .team {
+        width: 22rem;
+        height: 22rem;
+      }
+    }
+
+    #display {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: space-evenly;
+      height: 100vh;
+      height: 100dvh;
+      align-items: center;
+    }
+
+    .team {
+      width: 20rem;
+      height: 20rem;
+      padding: 1rem;
+      border: .4rem solid;
+      border-radius: 1rem;
+      overflow: scroll;
+    }
+
+    .team p {
+      margin: .5rem 0;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <textarea id="raw" class="main-split main-split-1">
+{
+  "equips": [
+    { "nom": "Equip 1", "color": "indianred" },
+    { "nom": "Equip 2", "color": "dodgerblue" },
+    { "nom": "Equip 3", "color": "mediumseagreen" },
+    { "nom": "Equip 4", "color": "goldenrod" },
+    { "nom": "Equip 5", "color": "darkorange" },
+    { "nom": "Equip 6", "color": "rebeccapurple" },
+    { "nom": "Equip 7", "color": "lightpink" },
+    { "nom": "Equip 8", "color": "saddlebrown" }
+  ],
+  "dimensions": {
+    "competències": [
+      "Avaluar els fonaments i el significat del disseny per comprendre la seva complexitat i diversitat cultural.",
+      "Reflexionar sobre els orígens i funcions del disseny, valorant la influència cultural i l'impacte mediambiental.",
+      "Analitzar la relació entre forma i funció en el disseny per comprendre els seus llenguatges simbòlics i contextuals.",
+      "Desenvolupar formes d'expressió personals en el disseny per potenciar la creativitat i l'autoestima.",
+      "Resoldre problemes de disseny amb creativitat, rigor tècnic i una actitud crítica envers les solucions.",
+      "Experimentar configuracions formals i compositives per afrontar reptes de disseny sostenibles i innovadors.",
+      "Desenvolupar projectes de disseny aplicant tècniques i eines per fomentar la creativitat i el treball col·laboratiu.",
+      "Planificar i adaptar les fases d’un projecte de disseny per assegurar-ne l’eficàcia i l’impacte en el resultat final.",
+      "Crear dissenys que considerin les oportunitats socials i econòmiques, prioritzant un enfocament inclusiu."
+    ],
+    "sabers": [
+      "Reconèixer la relació entre forma i funció en objectes bidimensionals i tridimensionals.",
+      "Descobrir el concepte de disseny i la seva terminologia associada.",
+      "Identificar les característiques dels moviments, corrents i escoles de disseny.",
+      "Reflexionar sobre el valor del disseny en diferents contextos culturals, històrics i socials.",
+      "Analitzar l'impacte mediambiental de l'activitat humana en el disseny.",
+      "Comparar objectes de disseny similars analitzant solucions aplicades en el seu context.",
+      "Reconèixer les dimensions simbòliques i semàntiques del llenguatge del disseny.",
+      "Projectar solucions de disseny adaptades a necessitats personals i expressives.",
+      "Desenvolupar propostes col·lectives de disseny amb una visió empàtica i col·laborativa.",
+      "Plantejar propostes de disseny ambicioses amb anàlisi crítica i tècnica rigorosa.",
+      "Valorar la selecció adequada de recursos tècnics en propostes de disseny.",
+      "Reconèixer les estructures formals i compositives en productes de disseny.",
+      "Planificar propostes de disseny sostenibles amb solucions creatives i innovadores.",
+      "Resoldre problemes de disseny amb un enfocament centrat en la sostenibilitat.",
+      "Planificar projectes de disseny adaptant-se als recursos disponibles de manera creativa.",
+      "Crear productes de disseny seleccionant eines i sistemes de representació amb rigor.",
+      "Gestionar projectes de disseny aplicant estratègies creatives i eficaces.",
+      "Imaginar fases de projecte detectant possibles problemes i proposant millores.",
+      "Analitzar les oportunitats del disseny inclusiu en diferents àmbits de l'activitat humana.",
+      "Desenvolupar projectes de disseny inclusiu tenint en compte les oportunitats socials i econòmiques."
+    ],
+    "ODS": [
+      "Posar fi a la pobresa en totes les seves formes i per a totes.",
+      "Posar fi a la fam, aconseguir la seguretat alimentària i la millora de la nutrició i promoure l’agricultura sostenible.",
+      "Garantir una vida sana i promoure el benestar per a tots en totes les edats.",
+      "Garantir una educació inclusiva,equitativa i de qualitat i promoure oportunitats d’aprenentatge durant tota la vida.",
+      "Aconseguir la igualtat entre els gèneres i l’apoderament de totes les dones i nenes.",
+      "Garantir la disponibilitat d’aigua i la seva ordenació i sanejament sostenible.",
+      "Garantir l’accés a una energia assequible, segura, sostenible i moderna per a totes.",
+      "Promoure el creixement econòmic sostingut, inclusiu i sostenible, l’ocupació plena i productiva i el treball decent per a totes.",
+      "Construir infraestructura resilient, promoure la industrialització inclusiva i sostenible i fomentar la innovació.",
+      "Reduir la desigualtat en i entre els països.",
+      "Aconseguir que les ciutats i els assentaments humans siguin inclusius, segurs, resilients i sostenibles.",
+      "Garantir modalitats de consum i producció sostenibles.",
+      "Adoptar mesures urgents per a combatre el canvi climàtic i els seus efectes.",
+      "Conservar i utilitzar de manera sostenible els oceans, les mars i els recursos marins per al desenvolupament sostenible.",
+      "Protegir, restablir i promoure l’ús sostenible dels ecosistemes terrestres, efectuar una ordenació sostenible dels boscos, lluitar contra la desertificació, detenir i revertir la degradació de les terres i posar fre a la pèrdua de la diversitat biològica.",
+      "Promoure societats pacífiques i inclusives per al desenvolupament sostenible, facilitar l’accés a la justícia per a tots i crear institucions eficaces, responsables i inclusives a tots els nivells.",
+      "Enfortir els mitjans d’execució i revitalitzar l’aliança mundial per al desenvolupament sostenible."
+    ]
+  }
+}
+</textarea>
+    <div class="main-split main-split-2">
+      <button onclick="paint(randomize())">Regenera</button>
+      <button onclick="store()">Desa</button>
+      <button onclick="reset()">Esborra</button>
+      <button onclick="toggle()">&lt;&mdash;&gt;</button>
+    </div>
+    <div class="main-split main-split-3">
+      <div id="display"></div>
+    </div>
+  </div>
+
+  <script>
+    const random = (min, max) =>
+      Math.floor(Math.random() * (max - min + 1)) + min;
+
+    const getRandom = (list, memo = []) => {
+      if (memo.length >= list.length) {
+        throw new RangeError(
+          "List of items must be at least as long as Teams list",
+        );
+      }
+      let idx = random(0, list.length - 1);
+      while (memo.includes(idx)) {
+        idx = random(0, list.length - 1);
+      }
+      memo.push(idx);
+      return `(${idx}) ${list[idx]}`;
+    };
+
+    function randomize() {
+      const data = JSON.parse(raw.value);
+
+      const memos = Object.fromEntries(
+        Object.keys(data.dimensions).map((key) => [key, []]),
+      );
+
+      const result = data.equips.map((team) => ({
+        ...team,
+        dimensions: Object.fromEntries(Object.entries(data.dimensions).map(
+          (pair) => [pair[0], getRandom(pair[1], /* memos[pair[0]] */)],
+        )),
+      }));
+      return {data, result};
+    }
+
+    const getDimensionsHtml = (dimensions) => Object.entries(dimensions).map(([key, value]) => `<p><strong>&lt;${key}&gt;</strong> ${value}</p>`).join('\n');
+
+    const getTeamHtml = (team) => `<div class="team" style="border-color: ${team.color}"><h3>${team.nom}</h3>${getDimensionsHtml(team.dimensions)}</div>`;
+
+    function paint({data, result}) {
+      console.log(data);
+      console.log(result);
+
+      display.innerHTML = result.map(getTeamHtml).join('\n');
+    }
+
+    function restore() {
+      const data = window.localStorage.getItem('dades-equips');
+      if (data) {
+        return JSON.parse(data);
+      }
+    }
+
+    let data = restore();
+    if (!data) {
+      data = randomize();
+    }
+    paint(data);
+
+    function store(obj = data) {
+      window.localStorage.setItem('dades-equips', JSON.stringify(obj));
+    }
+
+    function reset() {
+      if (window.confirm("Segur que voleu esborrar les dades?")) {
+        window.localStorage.removeItem('dades-equips');
+      }
+    }
+
+    function toggle() {
+      document.body.classList.toggle('full');
+    }
+
+  </script>
+</body>
+
+</html>
